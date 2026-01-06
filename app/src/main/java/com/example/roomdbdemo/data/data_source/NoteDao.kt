@@ -8,6 +8,9 @@ import androidx.room.Query
 import com.example.roomdbdemo.domain.model.Note
 import kotlinx.coroutines.flow.Flow
 
+
+/* Define the Dao (Database Access Object) for Interacting with the Room database */
+
 @Dao
 interface NoteDao {
 

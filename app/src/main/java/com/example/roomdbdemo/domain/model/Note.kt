@@ -8,6 +8,12 @@ import com.example.roomdbdemo.ui.theme.RedOrange
 import com.example.roomdbdemo.ui.theme.RedPink
 import com.example.roomdbdemo.ui.theme.Violet
 
+
+/*
+*   Define Data Class For the Data That will be shown on the note or Fetching from the Api
+* */
+
+
 @Entity
 data class Note(
     @PrimaryKey val id: Int? = null,
@@ -23,3 +29,5 @@ data class Note(
         val noteColors = listOf(RedOrange, LightGreen, Violet, BabyBlue, RedPink)
     }
 }
+
+class InvalidNoteException(message : String) : Exception(message)
