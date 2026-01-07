@@ -7,6 +7,7 @@ import com.example.roomdbdemo.data.repository.NoteRepositoryImpl
 import com.example.roomdbdemo.domain.repository.NoteRepository
 import com.example.roomdbdemo.domain.use_case.AddNote
 import com.example.roomdbdemo.domain.use_case.DeleteNote
+import com.example.roomdbdemo.domain.use_case.GetNote
 import com.example.roomdbdemo.domain.use_case.GetNotes
 import com.example.roomdbdemo.domain.use_case.NoteUseCases
 import dagger.Module
@@ -41,7 +42,8 @@ object AppModule {
         return NoteUseCases(
             getNotes = GetNotes(repository),
             deleteNote = DeleteNote(repository),
-            addNote = AddNote(repository)
+            addNote = AddNote(repository),
+            getNote = GetNote(repository)
         )
     }
 }
